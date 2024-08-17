@@ -1,0 +1,30 @@
+# Create a function checkdivide() which takes the given number
+# as an argument and returns true if all the digits of the given number
+# divide it else it returns false.
+def checkdivide(gvnnumb):
+    # Inside the checkdivide() function.
+    # Convert the given number into list of digits
+    # using list(),map(),int() and split() functions.
+    digitslstt = list(map(int, str(gvnnumb)))
+    # Loop in this digits list using For loop.
+    for digt in digitslstt:
+        # Inside the For loop check whether the given number
+        # is divisible by the iterator(digit).
+        # If it is false then return False.
+        if(gvnnumb % digt != 0):
+            return False
+    # After the end of for loop return True.
+    return True
+# Give the number as static input and store it in a variable.
+numb = 144
+# Pass the given number as an argument to checkdivide() function.
+# Check if the functions return true or false using the If conditional Statement.
+if(checkdivide(numb)):
+        # If it is true then print all the digits of
+        # the given number divides the given number.
+    print('The given number [', numb,
+          '] all the digits of the given number divides the given number')
+# Else print all the digits of the given number do not divide the given number.
+else:
+    print('The given number [', numb,
+          '] all the digits of the given number do not divide the given number')
